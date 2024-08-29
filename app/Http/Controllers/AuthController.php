@@ -41,12 +41,10 @@ class AuthController extends Controller
             'user' => $user,
             'token' => $token->plainTextToken
         ];
-
-
-
     }
 
     public function logout(Request $request){
-        return "logout";
+        $request->user()->tokens()->delete();
+        return ["message"=>"You are looged out."];
     }
 }
