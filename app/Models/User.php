@@ -46,4 +46,22 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    // A User belongs to a Department
+    public function department()
+    {
+        return $this->belongsTo(Department::class);
+    }
+
+    // A User belongs to a Study Program
+    public function studyProgram()
+    {
+        return $this->belongsTo(StudyProgram::class);
+    }
+
+    // A User (student) can have many Internships
+    public function internships()
+    {
+        return $this->hasMany(Internship::class, 'student_id');
+    }
 }
