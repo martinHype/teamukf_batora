@@ -2,24 +2,24 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\StoreAcademicYearRequest;
-use App\Http\Requests\UpdateAcademicYearRequest;
-use App\Models\AcademicYear;
+use App\Http\Requests\StoreUser_has_SubjectRequest;
+use App\Http\Requests\UpdateUser_has_SubjectRequest;
+use App\Models\User_has_Subject;
 
-class AcademicYearController extends Controller
+class UserHasSubjectController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return response() -> json(AcademicYear::all());
+        //
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreAcademicYearRequest $request)
+    public function store(StoreUser_has_SubjectRequest $request)
     {
         //
     }
@@ -27,7 +27,7 @@ class AcademicYearController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(AcademicYear $academicYear)
+    public function show(User_has_Subject $user_has_Subject)
     {
         //
     }
@@ -35,7 +35,7 @@ class AcademicYearController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateAcademicYearRequest $request, AcademicYear $academicYear)
+    public function update(UpdateUser_has_SubjectRequest $request, User_has_Subject $user_has_Subject)
     {
         //
     }
@@ -43,7 +43,7 @@ class AcademicYearController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(AcademicYear $academicYear)
+    public function destroy(User_has_Subject $user_has_Subject)
     {
         //
     }

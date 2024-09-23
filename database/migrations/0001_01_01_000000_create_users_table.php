@@ -16,11 +16,14 @@ return new class extends Migration
             $table->string('name');
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
+            //$table->foreignId('department_id')->constrained('departments');
+            //$table->foreignId('organization_id')->constrained('companies');
+            //$table->foreignId('subject_id')->constrained('subjects');
+            //table->foreignId('academicyear_id')->constrained('academicyears');
             $table->string('password');
             $table->rememberToken();
             $table->timestamps();
         });
-
         Schema::create('password_reset_tokens', function (Blueprint $table) {
             $table->string('email')->primary();
             $table->string('token');

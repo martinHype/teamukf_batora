@@ -10,7 +10,7 @@ class Subject extends Model
     use HasFactory;
 
     protected $fillable = [
-        'study_program_name'
+        'subject_name'
     ];
 
     // A Subject belongs to many Study Programs

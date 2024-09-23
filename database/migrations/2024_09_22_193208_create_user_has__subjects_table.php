@@ -11,9 +11,9 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('study_program_subject', function (Blueprint $table) {
+        Schema::create('user_has__subjects', function (Blueprint $table) {
             $table->id(); // Primary Key
-            $table->foreignId('study_program_id')->constrained('study_programs');
+            $table->foreignId('student')->constrained('users');
             $table->foreignId('subject_id')->constrained('subjects');
             $table->timestamps();
         });
@@ -24,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        //
+        Schema::dropIfExists('user_has__subjects');
     }
 };

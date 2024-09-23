@@ -13,7 +13,7 @@ class StudyProgramController extends Controller
      */
     public function index()
     {
-        //
+        return response() -> json(StudyProgram::select('id','study_program_name')->get());
     }
 
     /**

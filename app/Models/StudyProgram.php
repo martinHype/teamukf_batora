@@ -11,16 +11,16 @@ class StudyProgram extends Model
 
     protected $fillable = [
         'study_program_name',
-        'department_id',
+        //'department_id',
         'academic_year_id'
     ];
 
 
     // A Study Program belongs to a Department
-    public function department()
+    /*public function department()
     {
         return $this->belongsTo(Department::class);
-    }
+    }*/
 
     // A Study Program belongs to an Academic Year
     public function academicYear()

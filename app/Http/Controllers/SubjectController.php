@@ -13,7 +13,7 @@ class SubjectController extends Controller
      */
     public function index()
     {
-        //
+        return response() -> json(Subject::select('id','subject_name')->get());
     }
 
     /**

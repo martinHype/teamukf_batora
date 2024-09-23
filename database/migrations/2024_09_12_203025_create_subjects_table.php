@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('subjects', function (Blueprint $table) {
             $table->id(); // Primary Key
-            $table->string('study_program_name');
+            $table->string('subject_name');
             $table->timestamps();
         });
     }
